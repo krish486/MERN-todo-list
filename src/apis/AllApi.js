@@ -5,7 +5,7 @@ export let postApi = async (data) => {
     try {
         let res = await axios.post("https://mern-todo-list-hzih.onrender.com/api/lists/create", data)
         console.log("POST-API----->", res.data.data)
-        return res.data.data
+        return res?.data.data
     }
     catch (err) {
         console.log("Error in PostAPI---", err)
@@ -17,7 +17,7 @@ export let postApi = async (data) => {
 export let getDataApi = async () => {
     try {
         let res = await axios.get("https://mern-todo-list-hzih.onrender.com/api/lists")
-        return res.data
+        return res?.data
     }
     catch (err) {
         console.log("Error in getDataApi---", err)
