@@ -5,7 +5,8 @@ let listRoutes = require("./routes/list.routes")
 let cors = require("cors")
 
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: "https://mern-todo-list-ervs.onrender.com",
+    credentials: true
 }))
 
 app.use(express.json())
