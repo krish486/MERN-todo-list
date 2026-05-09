@@ -5,10 +5,9 @@ let listRoutes = require("./routes/list.routes")
 let cors = require("cors")
 
 app.use(cors({
-    origin: "https://mern-todo-list-ervs.onrender.com",
+    origin: "https://mern-todo-list-mu.vercel.app",
     credentials: true
 }))
-
 app.use(express.json())
 
 app.use("/api/lists", listRoutes)
